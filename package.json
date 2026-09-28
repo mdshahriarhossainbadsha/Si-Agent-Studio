@@ -1,0 +1,13 @@
+{
+  "name": "si-agent-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local AI Agent Studio launcher for OpenClaw and OpenWebUI",
+  "scripts": {
+    "start": "npx openclaw gateway --port 18789",
+    "gateway": "npx openclaw gateway --port 18789"
+  },
+  "dependencies": {
+    "openclaw": "latest"
+  }
+}
