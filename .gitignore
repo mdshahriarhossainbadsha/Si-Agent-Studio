@@ -1,10 +1,42 @@
+# Dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configuration
 config/agent.env
-logs/*
-data/*
-*.log
+config/docker.env
+config/auth-token.txt
+
+# Logs
+logs/*.log
+logs/setup.log
+logs/gateway.log
+logs/docker.log
+
+# Data
+data/
+.openclaw/
+
+# Environment
 .env
-.env.*
-!.env.example
+.env.local
+
+# OS
 .DS_Store
 Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+
+# Temporary
+*.tmp
+*.bak
+*~
