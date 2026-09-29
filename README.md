@@ -51,20 +51,6 @@ Setup.bat
 - Installs OpenClaw globally
 - Creates configuration files
 
-**Progress:**
-```
-Creating directories
-0% ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 100%
-
-Checking Node.js
-0% ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 100%
-
-...
-
-Setup completed
-100% ████████████████████████████████████████████████████████████ 100%
-```
-
 ---
 
 ### Step 2: Configure Authentication
@@ -76,18 +62,6 @@ Configure Auth.bat
 - Generates secure authentication token
 - Saves to `config/auth-token.txt`
 - Sets `OPENCLAW_GATEWAY_TOKEN` in config
-
-**Output:**
-```
-============================================================
-          Authentication Token Generated Successfully
-============================================================
-
-Your authentication token has been set.
-Token: <your-secure-token>
-
-Token saved in: C:\...\config\auth-token.txt
-```
 
 ---
 
@@ -103,19 +77,7 @@ Add API Key.bat
 
 **Prompt:**
 ```
-Enter your OpenAI API Key
-(Get it from: https://platform.openai.com/api-keys)
-
-Enter API Key: sk-proj-xxxxxxxxxxxxxxxxxxxxx
-```
-
-**Output:**
-```
-============================================================
-            API Key Saved Successfully
-============================================================
-
-Location: C:\Users\YourName\.openclaw\api-keys.env
+Enter your OpenAI API Key: sk-proj-xxxxxxxxxxxxxxxxxxxxx
 ```
 
 ---
@@ -129,21 +91,6 @@ Start Si Agent.bat
 - Starts OpenClaw Gateway (port 18789)
 - Starts OpenWebUI Docker container (port 3000)
 - Both services run in background
-
-**Output:**
-```
-============================================================
-              Services Started Successfully!
-============================================================
-
-OpenClaw Gateway:
-   URL: http://localhost:18789
-   Control UI: http://localhost:18789/ui
-
-OpenWebUI:
-   URL: http://localhost:3000
-   Chat Interface: http://localhost:3000/chat
-```
 
 ---
 
@@ -182,7 +129,7 @@ Stop Si Agent.bat
 
 ---
 
-## 📊 View Logs
+## 📋 View Logs
 
 ```bash
 View Logs.bat
@@ -195,7 +142,7 @@ View Logs.bat
 
 ---
 
-## 🗂️ Configuration
+## 🛠️ Configuration
 
 ### Main Config
 ```
@@ -227,7 +174,7 @@ Contains:
 
 ---
 
-## 🔒 Security Notes
+## 🔐 Security Notes
 
 ### Authentication Token
 - Generated automatically in `Configure Auth.bat`
@@ -342,41 +289,41 @@ Si-Agent-Studio/
 ## 🔄 Workflow
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  Windows Command Prompt                                 │
-├─────────────────────────────────────────────────────────┤
-│ C:\Si-Agent-Studio> Setup.bat                           │
-│ ✓ Creates folders                                       │
-│ ✓ Checks dependencies (Node.js, npm, Docker)            │
-│ ✓ Installs OpenClaw globally                            │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│  Windows Command Prompt                                  │
+├──────────────────────────────────────────────────────────┤
+│ C:\Si-Agent-Studio> Setup.bat                            │
+│ ✓ Creates folders                                        │
+│ ✓ Checks dependencies (Node.js, npm, Docker)             │
+│ ✓ Installs OpenClaw globally                             │
+└──────────────────────────────────────────────────────────┘
                          ↓
-┌─────────────────────────────────────────────────────────┐
-│ C:\Si-Agent-Studio> Configure Auth.bat                  │
-│ ✓ Generates authentication token                        │
-│ ✓ Saves to config/auth-token.txt                        │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│ C:\Si-Agent-Studio> Configure Auth.bat                   │
+│ ✓ Generates authentication token                         │
+│ ✓ Saves to config/auth-token.txt                         │
+└──────────────────────────────────────────────────────────┘
                          ↓
-┌─────────────────────────────────────────────────────────┐
-│ C:\Si-Agent-Studio> Add API Key.bat                     │
-│ Enter API Key: sk-proj-xxxxxx                           │
-│ ✓ Saves to ~/.openclaw/api-keys.env                     │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│ C:\Si-Agent-Studio> Add API Key.bat                      │
+│ Enter API Key: sk-proj-xxxxxx                            │
+│ ✓ Saves to ~/.openclaw/api-keys.env                      │
+└──────────────────────────────────────────────────────────┘
                          ↓
-┌─────────────────────────────────────────────────────────┐
-│ C:\Si-Agent-Studio> Start Si Agent.bat                  │
-│ ✓ OpenClaw Gateway running on :18789                    │
-│ ✓ OpenWebUI running on :3000                            │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│ C:\Si-Agent-Studio> Start Si Agent.bat                   │
+│ ✓ OpenClaw Gateway running on :18789                     │
+│ ✓ OpenWebUI running on :3000                             │
+└────────────────────��─────────────────────────────────────┘
                          ↓
-┌─────────────────────────────────────────────────────────┐
-│  Web Browser                                            │
-├─────────────────────────────────────────────────────────┤
-│ http://localhost:3000                                   │
-│ → OpenWebUI Chat Interface                              │
-│ → Connected to OpenClaw Gateway                         │
-│ → Ready to chat with AI                                 │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│  Web Browser                                             │
+├──────────────────────────────────────────────────────────┤
+│ http://localhost:3000                                    │
+│ → OpenWebUI Chat Interface                               │
+│ → Connected to OpenClaw Gateway                          │
+│ → Ready to chat with AI                                  │
+└──────────────────────────────────────────────────────────┘
 ```
 
 ---
